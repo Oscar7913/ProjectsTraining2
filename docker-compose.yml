@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  flask:
+    build: './flask'
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./flask/app:/srv
+      - shared-volume:/shared
+  node:
+    build: './node'
+    ports:
+     - '3000:3000'
+    volumes:
+      - ./node:/src
+      - shared-volume:/shared
+volumes:
+  shared-volume:
