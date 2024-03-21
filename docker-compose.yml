@@ -1,13 +1,13 @@
 version: '3'
 
 services:
-  flask:
-    build: './flask'
-    ports:
-      - '5000:5000'
-    volumes:
-      - ./flask/app:/srv
-      - shared-volume:/shared
+  # flask:
+  #   build: './flask'
+  #   ports:
+  #     - '5000:5000'
+  #   volumes:
+  #     - ./flask/app:/srv
+  #     - shared-volume:/shared
   node:
     build: './node'
     ports:
