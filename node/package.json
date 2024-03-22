@@ -4,8 +4,9 @@
   "description": "Rest API to create a diagram",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node --no-warnings=ExperimentalWarning --loader ts-node/esm src/index.ts "
+    "test": "jest --detectOpenHandles --coverage --coverageReporters=text --coverageReporters='json-summary'",
+    "build": "node --no-warnings=ExperimentalWarning --loader ts-node/esm src/index.ts ",
+    "lint": "eslint . --ext .ts"
   },
   "author": "",
   "license": "ISC",
