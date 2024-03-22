@@ -1,7 +1,9 @@
-from diagrams import Diagram
-from diagrams.aws.compute import EC2
-from diagrams.aws.database import RDS
-from diagrams.aws.network import ELB
+from diagrams import Cluster,Diagram, Edge
+from diagrams.aws.compute import EC2, ECS, EKS, Lambda
+from diagrams.aws.database import RDS, ElastiCache, RDS, Redshift
+from diagrams.aws.network import ELB, Route53
+from diagrams.aws.integration import SQS
+from diagrams.aws.storage import S3
 import sys
 
 
