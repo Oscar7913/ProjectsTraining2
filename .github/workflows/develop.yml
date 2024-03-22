@@ -20,7 +20,7 @@ jobs:
       - name: Clear npm cache
         run: npm cache clean --force
       - name: Navigate to app directory
-        run: cd ./node
+        run: cd node
       - name: Install dependencies
         run: npm install
       - name: Run lint
