@@ -19,12 +19,11 @@ jobs:
             node-version: "20.x"
       - name: Clear npm cache
         run: npm cache clean --force
-      - name: Navigate to app directory
-        run: cd node
-      - name: Install dependencies
-        run: npm install
-      - name: Run lint
-        run: npm run lint
+      - name: Install dependencies and run lint
+        run: |
+          cd node
+          npm install
+          npm run lint
 
   # test:
   #   needs: build
