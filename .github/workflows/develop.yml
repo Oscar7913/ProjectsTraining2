@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
             node-version: "20.x"
+      - name: Clear npm cache
+        run: npm cache clean --force
       - name: Navigate to app directory
         run: cd ./node
       - name: Install dependencies
