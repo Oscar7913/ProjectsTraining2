@@ -13,13 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Navigate to app directory
-        run: cd node
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.2
         with:
             node-version: "20.x"
-            cache: 'npm'
+      - name: Navigate to app directory
+        run: cd node
       - name: Install dependencies
         run: npm install
       - name: Run lint
@@ -31,13 +30,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Navigate to app directory
-        run: cd node
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.2
         with:
             node-version: "20.x"
-            cache: 'npm'
+      - name: Navigate to app directory
+        run: cd node
       - name: Install dependencies
         run: npm install
       - name: Run test
