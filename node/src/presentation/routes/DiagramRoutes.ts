@@ -6,10 +6,11 @@ export const DiagramRoutes = (router: Router): void => {
   router.post('/api/diagram', async (req: Request, res: Response) => {
     try {
       const body = req.body;
-      console.log(body);
-      await generateDiagram(body);
+      // console.log(body);
+      const name = await generateDiagram(body);
+      console.log(name);
       const directory = '/shared';
-      const filePath = path.join(directory, 'diagram.png');
+      const filePath = path.join(directory, `${name}.png`);
       res.setHeader('Content-Type', 'image/png');
       res.status(200).sendFile(filePath);
     } catch (error) {
